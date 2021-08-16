@@ -15,13 +15,13 @@
          </image>
       </ImageView>
       <Button fx:id="pc" layoutX="46.0" layoutY="65.0" mnemonicParsing="false" onAction="#onPcSelect" prefHeight="94.0" prefWidth="93.0" />
-      <Button fx:id="notebook" layoutX="156.0" layoutY="65.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="93.0" />
-      <Button fx:id="impressora" layoutX="262.0" layoutY="65.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="93.0" />
-      <Button fx:id="suprimento" layoutX="369.0" layoutY="65.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="93.0" />
-      <Button fx:id="camera" layoutX="47.0" layoutY="186.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="93.0" />
-      <Button fx:id="rede" layoutX="156.0" layoutY="186.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="93.0" />
-      <Button fx:id="painel" layoutX="263.0" layoutY="186.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="93.0" />
-      <Button fx:id="outros" layoutX="370.0" layoutY="185.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="93.0" />
+      <Button fx:id="notebook" layoutX="156.0" layoutY="65.0" mnemonicParsing="false" onAction="#onNotebookSelect" prefHeight="93.0" prefWidth="93.0" />
+      <Button fx:id="impressora" layoutX="262.0" layoutY="65.0" mnemonicParsing="false" onAction="#onImpressoraSelect" prefHeight="94.0" prefWidth="93.0" />
+      <Button fx:id="suprimento" layoutX="369.0" layoutY="65.0" mnemonicParsing="false" onAction="#onSuprimentoSelect" prefHeight="94.0" prefWidth="93.0" />
+      <Button fx:id="camera" layoutX="47.0" layoutY="186.0" mnemonicParsing="false" onAction="#onCameraSelect" prefHeight="94.0" prefWidth="93.0" />
+      <Button fx:id="rede" layoutX="156.0" layoutY="186.0" mnemonicParsing="false" onAction="#onRedeSelect" prefHeight="94.0" prefWidth="93.0" />
+      <Button fx:id="painel" layoutX="263.0" layoutY="186.0" mnemonicParsing="false" onAction="#onPainelSelect" prefHeight="94.0" prefWidth="93.0" />
+      <Button fx:id="outros" layoutX="370.0" layoutY="185.0" mnemonicParsing="false" onAction="#onOutrosSelect" prefHeight="94.0" prefWidth="93.0" />
       <Label layoutX="171.0" layoutY="20.0" text="INVENTÁRIO CPD">
          <font>
             <Font name="System Bold" size="20.0" />

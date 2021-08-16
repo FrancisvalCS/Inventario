@@ -9,7 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class NotebookController implements Initializable{
+public class CamerasController implements Initializable {
 
 	@FXML
 	private Button cancela;

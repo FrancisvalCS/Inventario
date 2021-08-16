@@ -9,7 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class NotebookController implements Initializable{
+public class ImpressorasController implements Initializable{
 
 	@FXML
 	private Button cancela;
@@ -21,6 +21,7 @@ public class NotebookController implements Initializable{
 		stage.close();
 		Main.getPrimaryStage().show();
 	}
+	
 	
 	public void initialize(URL location, ResourceBundle resources) {}
 

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ComputadorController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.OutrosController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafafa00" height="219.0" layoutX="14.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="610.0" />
       <Label layoutX="20.0" layoutY="41.0" text="Nome:" />

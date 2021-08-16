@@ -57,6 +57,41 @@ public class MainController implements Initializable{
 		loadView("/gui/computador.fxml");
 	}
 	
+	@FXML
+	public void onNotebookSelect() {
+		loadView("/gui/notebook.fxml");
+	}
+	
+	@FXML
+	public void onImpressoraSelect() {
+		loadView("/gui/impressoras.fxml");
+	}
+	
+	@FXML
+	public void onSuprimentoSelect() {
+		loadView("/gui/suprimentos.fxml");
+	}
+	
+	@FXML
+	public void onCameraSelect() {
+		loadView("/gui/cameras.fxml");
+	}
+	
+	@FXML
+	public void onRedeSelect() {
+		loadView("/gui/redes.fxml");
+	}
+	
+	@FXML
+	public void onPainelSelect() {
+		loadView("/gui/painel.fxml");
+	}
+	
+	@FXML
+	public void onOutrosSelect() {
+		loadView("/img/outros.fxml");
+	}
+	
 	
 	public void initialize(URL location, ResourceBundle resources) {
 		//Adiciona a imagem externa à um ImageView
