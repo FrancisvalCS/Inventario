@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ComputadorController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafafa00" height="211.0" layoutX="14.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="610.0" />
+      <Label layoutX="21.0" layoutY="41.0" text="Modelo:" />
+      <Label layoutX="22.0" layoutY="123.0" text="Quantidade em estoque:" />
+      <TextField layoutX="75.0" layoutY="37.0" prefHeight="25.0" prefWidth="233.0" />
+      <TextField layoutX="159.0" layoutY="119.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="23.0" layoutY="82.0" text="Quantidade necessária:" />
+      <Label layoutX="14.0" layoutY="260.0" text="OBS:" />
+      <TextArea layoutX="14.0" layoutY="277.0" prefHeight="96.0" prefWidth="319.0" />
+      <Button layoutX="547.0" layoutY="342.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="66.0" text="Inserir" />
+      <Button fx:id="cancela" layoutX="463.0" layoutY="342.0" mnemonicParsing="false" onAction="#cancela" prefHeight="31.0" prefWidth="66.0" text="Cancelar" />
+      <Label layoutX="24.0" layoutY="163.0" text="Modelo da impressora:" />
+      <TextField layoutX="159.0" layoutY="159.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="333.0" layoutY="41.0" text="Contratada:" />
+      <TextField layoutX="409.0" layoutY="37.0" prefHeight="25.0" prefWidth="201.0" />
+      <Label layoutX="333.0" layoutY="82.0" text="Contratante:" />
+      <TextField layoutX="407.0" layoutY="78.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField layoutX="159.0" layoutY="78.0" />
+   </children>
+</Pane>
