@@ -89,7 +89,7 @@ public class MainController implements Initializable{
 	
 	@FXML
 	public void onOutrosSelect() {
-		loadView("/img/outros.fxml");
+		loadView("/gui/outros.fxml");
 	}
 	
 	

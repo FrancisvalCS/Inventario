@@ -7,6 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CamerasController">
    <children>
@@ -29,5 +30,10 @@
       <TextArea layoutX="14.0" layoutY="277.0" prefHeight="96.0" prefWidth="319.0" />
       <Button layoutX="547.0" layoutY="342.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="66.0" text="Inserir" />
       <Button fx:id="cancela" layoutX="463.0" layoutY="342.0" mnemonicParsing="false" onAction="#cancela" prefHeight="31.0" prefWidth="66.0" text="Cancelar" />
+      <Label layoutX="275.0" layoutY="-1.0" text="CÂMERAS" textFill="#076816">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
