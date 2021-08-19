@@ -17,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -30,6 +31,8 @@ public class ComputadorController implements Initializable{
 	EntityManager em = emf.createEntityManager();
 	
 	@FXML
+	private Label msg;
+	@FXML
 	private TextField nome;
 	@FXML
 	private TextField marca;
@@ -40,7 +43,7 @@ public class ComputadorController implements Initializable{
 	@FXML
 	private TextField ram;
 	@FXML
-	private TextField inventario;
+	private TextField patrimonio;
 	@FXML
 	private TextField setor;
 	@FXML
@@ -58,7 +61,7 @@ public class ComputadorController implements Initializable{
 	@FXML
 	private Button cancela;
 	@FXML
-	private Button inserir;
+	private Button salvar;
 	
 	//Lista para combo box de unidade de disco
 	private List<UnidadeHd> unityHd = new ArrayList<UnidadeHd>();
@@ -87,7 +90,9 @@ public class ComputadorController implements Initializable{
 	
 	@FXML
 	public void salvaNoBanco() throws IOException{
-		
+		if((nome.getText() == null) || (nome.getText().equals("")) ) {
+			msg.setText("Campo nome está vazio!");
+		}
 	}
 	
 	//Povoar Combo box de unidade de disco
