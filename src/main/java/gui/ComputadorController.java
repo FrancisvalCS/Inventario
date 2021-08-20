@@ -11,6 +11,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import application.Main;
+import dao.ComputadorDao;
+import entities.Computador;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -24,6 +26,8 @@ import javafx.stage.Stage;
 import util.combo.Status;
 import util.combo.StorageType;
 import util.combo.UnidadeHd;
+
+//import static java.lang.Integer.
 
 public class ComputadorController implements Initializable{
 	
@@ -41,27 +45,26 @@ public class ComputadorController implements Initializable{
 	@FXML
 	private TextField hd;
 	@FXML
+	private ComboBox<UnidadeHd> unidadeHd;
+	@FXML
 	private TextField ram;
 	@FXML
 	private TextField patrimonio;
 	@FXML
 	private TextField setor;
 	@FXML
-	private TextField sn;
-	@FXML
-	private TextField so;
-	@FXML
-	private TextArea obs;
-	@FXML
-	private ComboBox<UnidadeHd> unidadeHd;
-	@FXML
 	private ComboBox<Status> status;
 	@FXML
+	private TextField sn;
+	@FXML
 	private ComboBox<StorageType> type;
+	@FXML
+	private TextArea obs;
 	@FXML
 	private Button cancela;
 	@FXML
 	private Button salvar;
+	
 	
 	//Lista para combo box de unidade de disco
 	private List<UnidadeHd> unityHd = new ArrayList<UnidadeHd>();
@@ -79,6 +82,9 @@ public class ComputadorController implements Initializable{
 		carregarHdSize(); //ComboBox unidadeHd
 		carregaStatus(); //ComboBox status
 		carregaTipo(); //ComboBox type
+		apenasNumeros(hd);
+		apenasNumeros(ram);
+		apenasNumeros(patrimonio);
 	}
 	
 	@FXML
@@ -90,8 +96,26 @@ public class ComputadorController implements Initializable{
 	
 	@FXML
 	public void salvaNoBanco() throws IOException{
-		if((nome.getText() == null) || (nome.getText().equals("")) ) {
-			msg.setText("Campo nome está vazio!");
+		if((nome.getText() == null) || (nome.getText().equals("")) || ((marca.getText() == null) || (marca.getText().equals("")) || ((setor.getText() == null)||(setor.getText().equals(""))))) {
+			msg.setText("Os campos com * são obrigatórios!");
+		}else {
+			Computador computador = new Computador();
+			ComputadorDao pcDao = new ComputadorDao();
+			
+			computador.setNome(nome.getText());
+			computador.setMarca(marca.getText());
+			computador.setModelo(modelo.getText());
+			computador.setHd(Integer.parseInt(hd.getText()));
+			computador.setUnidadeHd(unidadeHd.getPromptText());
+			computador.setRam(Integer.parseInt(ram.getText()));
+			computador.setPatrimonio(Integer.parseInt(patrimonio.getText()));
+			computador.setSetor(setor.getText());
+			computador.setStatus(status.getPromptText());
+			computador.setSn(sn.getText());
+			computador.setType(type.getPromptText());
+			computador.setObs(obs.getText());
+			pcDao.persist(computador);
+			msg.setText("Dados enviados! Favor verificar no banco.");
 		}
 	}
 	
@@ -133,6 +157,21 @@ public class ComputadorController implements Initializable{
 		type.setItems(tipo);
 	}
 	
-	
+	//Campo textfield apenas com números
+	public void apenasNumeros(TextField campo) {
+		
+		campo.textProperty().addListener(
+				(observable, oldValue, newValue) -> {
+					try {
+						if(!newValue.equals("")) {
+							Integer.parseInt(newValue);
+						}
+					}catch(Exception e) {
+						campo.setText(oldValue);
+					}
+				}
+		);
+		
+	}
 
 }
